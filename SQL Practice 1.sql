@@ -54,6 +54,7 @@ VALUES (101, 1, '2023-01-15', 1200.50, 'UPI', 'Delivered'),
 SELECT * FROM Order_Table;
 
 #Let's Practice:
+
 #1.📋 Select Specific Data 
 #Retrieve the names and ages of customers from the customers table who are older than 30.
 SELECT CusName, Age FROM Customers WHERE age > 30;
