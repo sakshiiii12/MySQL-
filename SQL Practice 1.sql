@@ -1,7 +1,9 @@
 #SQL - IT IS A PROGRAMMING LANGUAGE USED TO INTERACT WITH REATIONAL DATABASES.
 
+#Database shope
 CREATE DATABASE Shope;
 
+#Table 1
 CREATE TABLE Customers(
 Customer_id INT PRIMARY KEY auto_increment,
 CusName VARCHAR (100) NOT NULL,
@@ -26,6 +28,7 @@ VALUES
 
 SELECT * FROM Customers;
 
+#Table 2
 CREATE TABLE Order_Table(
 Order_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 Customer_id INT,
