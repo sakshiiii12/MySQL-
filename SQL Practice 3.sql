@@ -37,3 +37,37 @@ VALUES (101, 'AMAN', 'GUPTA', '2025-01-01', 50000),
 (104, 'DIVYA', 'GUPTA', '2025-03-09', 90000),
 (105, 'EVYA', 'KUMARI', '2025-06-02',20000);
 SELECT * FROM employees;
+
+#6.Update Records
+#Increase salary by 10% for all employees in table employees.
+SET SQL_SAFE_UPDATES = 0;
+UPDATE employees
+SET salary = salary * 1.10;
+SET SQL_SAFE_UPDATES = 1;
+
+#7.Delete Records
+#Delete the salary columns from the table
+ALTER TABLE employees
+DROP COLUMN salary;
+
+#JOINS (Combining Tables)
+CREATE TABLE department(
+emp_id INT PRIMARY KEY,
+manager_name VARCHAR(50),
+name VARCHAR(50),
+FOREIGN KEY (emp_id) REFERENCES employees(emp_id)
+);
+
+INSERT INTO department(emp_id, manager_name, name)
+VALUE (101, NULL, 'AI'),
+(102, 'Alice', 'DS'),
+(103, 'Hina', 'GenAI'),
+(104, 'Abhay', 'ML'),
+(105, 'Rahul', 'DA');
+SELECT * FROM department;
+
+#8.Inner Join
+#Show employee names and their department names using employees and departments tables. 
+SELECT * FROM employees
+INNER JOIN department 
+ON employees.emp_id = department.emp_id;
