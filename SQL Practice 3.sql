@@ -16,3 +16,7 @@ hire_date DATE
 #Add a column salary (DECIMAL(10,2)) to the existing employees table.
 ALTER TABLE employees
 ADD COLUMN salary INT NOT NULL DEFAULT 20000;
+
+#3.Drop a Table
+#Delete the table old_backups from the database if it exists. 
+DROP TABLE IF EXISTS old_backups;
