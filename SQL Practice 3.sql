@@ -25,3 +25,15 @@ DROP TABLE IF EXISTS old_backups;
 #Rename table employees to cilents
 ALTER TABLE employees
 RENAME TO cilents;
+
+#DML (Insert/Update/Delete Data)
+
+#5.Insert a Row
+#Insert a department with ID 101 and name 'Marketing' into the departments table.
+INSERT INTO employees (emp_id, first_name, last_name, hire_date, salary)
+VALUES (101, 'AMAN', 'GUPTA', '2025-01-01', 50000),
+(102, 'BOBY', 'SHARMA', '2025-01-05', 32000),
+(103, 'CASEY', 'ROY', '2025-01-07', 20000),
+(104, 'DIVYA', 'GUPTA', '2025-03-09', 90000),
+(105, 'EVYA', 'KUMARI', '2025-06-02',20000);
+SELECT * FROM employees;
