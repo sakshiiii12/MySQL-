@@ -77,3 +77,16 @@ ON employees.emp_id = department.emp_id;
 SELECT * FROM employees AS e
 LEFT JOIN department AS d
 ON e.emp_id = d.emp_id;
+
+#10.Self JOIN 
+#Show each employee and their manager name from the same employees table (manager_id references emp_id).
+SELECT 
+    e.emp_id AS employee_id,
+    e.emp_name AS employee_name,
+    m.emp_name AS manager_name
+FROM 
+    employees e
+LEFT JOIN 
+    employees m
+ON 
+    e.manager_id = m.emp_id;
