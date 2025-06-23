@@ -71,3 +71,9 @@ SELECT * FROM department;
 SELECT * FROM employees
 INNER JOIN department 
 ON employees.emp_id = department.emp_id;
+
+#9.Left Join
+#Show all departments and the number of employees in each department (include departments with zero employees).
+SELECT * FROM employees AS e
+LEFT JOIN department AS d
+ON e.emp_id = d.emp_id;
