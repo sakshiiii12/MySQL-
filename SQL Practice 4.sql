@@ -8,3 +8,6 @@ MODIFY salary NUMERIC(12,2);
 ALTER TABLE employees
 ADD CONSTRAINT chk_salary_positive
 CHECK (salary > 0);
+
+#12. Add Foreign Key 
+#In employees, make dept_id reference departments(dept_id) with ON DELETE SET NULL.
